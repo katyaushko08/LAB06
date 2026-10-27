@@ -67,7 +67,9 @@ namespace LAB06
         public static Box operator +(Box a, Box b)
         {
             if (a is null || b is null)
+            {
                 throw new ArgumentNullException("Коробка не существует.");
+            }
 
             return new Box(
                 Math.Max(a.Length, b.Length),
@@ -123,20 +125,6 @@ namespace LAB06
         public static bool operator !=(Box a, Box b)
         {
             return !(a == b);
-        }
-
-        public override bool Equals(object obj)
-        {
-            if (obj is Box otherBox)
-            {
-                return this == otherBox;
-            }
-            return false;
-        }
-
-        public override int GetHashCode()
-        {
-            return Volume().GetHashCode();
         }
     }
 }

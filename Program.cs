@@ -26,7 +26,7 @@
             }
             catch(ArgumentException ex)
             {
-                Console.WriteLine(ex.Message );
+                Console.WriteLine(ex.Message);
             }
 
             Console.WriteLine($"box1 == box3: {box1 == box3}"); 
