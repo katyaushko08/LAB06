@@ -68,6 +68,7 @@ namespace LAB06
         {
             if (a is null || b is null)
                 throw new ArgumentNullException("Коробка не существует.");
+
             return new Box(
                 Math.Max(a.Length, b.Length),
                 Math.Max(a.Width, b.Width),
@@ -78,8 +79,10 @@ namespace LAB06
         public static Box operator -(Box a, Box b)
         {
             if (a is null || b is null)
+            {
                 throw new ArgumentNullException("Коробка не существует.");
-
+            }
+               
             Box big, small;
             if (a.Volume() >= b.Volume())
             {
@@ -110,13 +113,9 @@ namespace LAB06
 
         public static bool operator ==(Box a, Box b)
         {
-            if (ReferenceEquals(a, b))
-            {
-                return true ;
-            }
             if (a is null || b is null)
             {
-                return false ;
+                return a is null && b is null;
             }
             return a.Volume() == b.Volume();
         }
