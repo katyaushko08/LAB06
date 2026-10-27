@@ -11,10 +11,10 @@
             Console.WriteLine($"box 1 = {box1}");
             Console.WriteLine($"box 2 = {box2}");
             Console.WriteLine($"box 3 = {box3})");
-            Console.WriteLine();
 
             box1.Length = 12;
             Console.WriteLine($"Измененая коробка: {box1}");
+            Console.WriteLine();
 
             Box sum = box1 + box2;
             Console.WriteLine($"box1 + box2: {sum}");
@@ -31,6 +31,7 @@
 
             Console.WriteLine($"box1 == box3: {box1 == box3}"); 
             Console.WriteLine($"box1 != box3: {box1 != box3}");
+            Console.WriteLine();
 
             try
             {
